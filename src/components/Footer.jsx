@@ -1,6 +1,6 @@
 import React from "react";
 import '../App';
-const Navbar = () => {
+const Footer = () => {
     return (
         <div className="footer">
             
@@ -9,4 +9,4 @@ const Navbar = () => {
     );
 };
 
-export default Navbar
+export default Footer

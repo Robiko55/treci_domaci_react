@@ -1,6 +1,6 @@
 import React from "react";
 import '../App';
-const Navbar = () => {
+const MovieList = () => {
     return (
        
             <div>
@@ -10,4 +10,4 @@ const Navbar = () => {
     );
 };
 
-export default Navbar
+export default MovieList
