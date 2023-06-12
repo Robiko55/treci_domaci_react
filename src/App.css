@@ -1,17 +1,24 @@
 * {
   box-sizing: 0;
   margin: 0;
+
 }
 
 
 .navbar { 
   width: 100%;
   height: 10vh;
-  background: black;
+  background-color: black;
+
   color: white;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  position: fixed;
+  box-shadow: 10px;
+  z-index: 100;
+  font-family: monospace;
+  
 
 }
 
@@ -27,10 +34,60 @@
   
 }
 
-.movie-list {
+.sneakers-list {
   min-height: 80vh;
   width: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   justify-items: center;
 }
+
+img{
+  width: 400px;
+  height: 300px;
+  transition: all 0.3 ease-in-out;
+  margin-top: 10px;
+
+}
+
+img:hover{
+  transform: scale(1.05);
+  z-index: 10;
+}
+
+.sneaker{
+  text-align: center;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+   align-items: center;
+   justify-content: center;
+
+}
+
+.sneaker:hover{
+  scale: 10px;
+}
+
+
+button {
+  padding: 10px;
+  background-color: transparent;
+  color: black;
+  width: 100%;
+  border-color: black;
+  border-width: 1px;
+  transition: all 0.2s ease-in-out;
+  z-index: 80;
+  margin-top: 10px;
+  
+}
+
+button:hover{
+  background-color: black;
+  color: white;
+  border: 1px;
+  border-color: black;
+  cursor: pointer;
+}
+

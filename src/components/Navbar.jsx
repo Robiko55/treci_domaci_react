@@ -4,7 +4,7 @@ const Navbar = () => {
     return (
         <div className="navbar">
             <div>
-                <h1> React Movie App</h1>
+                <h1> For the sneakers lovers</h1>
                 </div>
             <div> Your Favourites </div>
         </div>
