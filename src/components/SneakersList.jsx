@@ -3,7 +3,7 @@ import '../App';
 import {API_URL} from '../Api'; 
 import axios from 'axios';
 import { useAppContext } from "./context/appContext";
-
+import {useNavigate} from 'react-router-dom';
 
 const SneakersList = () => {
 
@@ -12,7 +12,7 @@ const SneakersList = () => {
 
     const {favorites, addToFavorites, removeFromFavorites} = useAppContext();
 
-    console.log("favorites are", favorites)
+    const navigate = useNavigate();
 
 
     const favoritesChecker = (id) => {
@@ -38,7 +38,7 @@ const SneakersList = () => {
                     <h3>{sneaker.title}</h3>
                     </div>
                 <div>
-                    <img src={sneaker.media.thumbUrl} alt="#"/>
+                    <img src={sneaker.media.thumbUrl} alt="#" onClick={()=>navigate(`/sneakers/${sneaker.id}`)}/>
                     </div> {/* Prikaz slika patika na sajtu preuzet sa apia*/}
                 <div>
                 {favoritesChecker(sneaker.id) ? (

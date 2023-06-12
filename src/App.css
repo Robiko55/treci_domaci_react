@@ -128,4 +128,11 @@ button:hover{
   justify-items: center;
 }
 
+.sneaker-details{
+
+  min-height: 90vh;
+  padding-top: 100px;
+  margin-left: 40px;
+}
+
 
