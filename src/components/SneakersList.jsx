@@ -17,7 +17,7 @@ const SneakersList = () => {
 
     const favoritesChecker = (id) => {
 
-        const boolean = favorites.some((sneaker)=> sneaker.id == id);
+        const boolean = favorites.some((sneaker)=> sneaker.id === id);
         return boolean;
 
     };
@@ -43,7 +43,7 @@ const SneakersList = () => {
                 <div>
                 {favoritesChecker(sneaker.id) ? (
 
-                    <button onClick={()=> removeFromFavorites(sneaker)}>
+                    <button onClick={()=> removeFromFavorites(sneaker.id)}>
                         Remove from Favorites
                         </button>
                 ) : (

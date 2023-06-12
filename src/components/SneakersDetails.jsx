@@ -3,7 +3,7 @@ import '../App';
 
 const SneakersDetails = () => {
     return (  
-            <div> SneakersDetails</div>
+            <div className="sneaker-details"> SneakersDetails</div>
     );
 };
 
