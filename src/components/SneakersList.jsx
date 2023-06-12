@@ -3,13 +3,17 @@ import '../App';
 import {API_URL} from '../Api'; 
 import axios from 'axios';
 import { useAppContext } from "./context/appContext";
+
+
 const SneakersList = () => {
 
 
     const [sneakers,setSneakers] = useState([]);
 
     const {favorites, addToFavorites, removeFromFavorites} = useAppContext();
-    
+
+    console.log("favorites are", favorites)
+
     useEffect(() => { 
         axios.get(API_URL).then(res=> {
             console.log(res.data)
@@ -23,7 +27,7 @@ const SneakersList = () => {
         <div key={sneaker.id} className="sneaker">
                 <div><h3>{sneaker.title}</h3></div>
                 <div><img src={sneaker.media.thumbUrl} alt="#"/></div> {/* Prikaz slika patika na sajtu preuzet sa apia*/}
-                <div><button>Add to Favorites</button></div>
+                <div><button onClick={()=> addToFavorites(sneaker)}>Add to Favorites</button></div>
             </div>
         ))}
             </div>;

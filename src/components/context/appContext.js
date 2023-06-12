@@ -1,5 +1,5 @@
 import {createContext, useContext} from "react";
-
+import { useState } from "react";
 const AppContext = createContext(null);
 
 export const useAppContext = () => {
@@ -14,7 +14,7 @@ export const useAppContext = () => {
 }
 
 
-const AppContextProvider = ({childrean}) => {
+const AppContextProvider = ({children}) => {
     const [favorites,setFavorites] = useState([]);
 
     const addToFavorites = (sneaker) => {
