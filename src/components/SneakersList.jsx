@@ -44,11 +44,11 @@ const SneakersList = () => {
                 {favoritesChecker(sneaker.id) ? (
 
                     <button onClick={()=> removeFromFavorites(sneaker.id)}>
-                        Remove from Favorites
+                       Izbaci iz omiljenih
                         </button>
                 ) : (
                     <button onClick={()=> addToFavorites(sneaker)}>
-                        Add to Favorites
+                        Dodaj u omiljeno
                         </button>
                 )}
             </div>

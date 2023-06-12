@@ -20,18 +20,18 @@ const Favorites = () => {
             <div>
               {favorites.some((s) => s.id === sneaker.id) ? (
                 <button onClick={() => removeFromFavorites(sneaker.id)}>
-                  Remove from Favorites
+                  Izbaci iz omiljenih
                 </button>
               ) : (
                 <button onClick={() => addToFavorites(sneaker)}>
-                  Add to Favorites
+                 Dodaj u omiljeno
                 </button>
               )}
             </div>
           </div>
         ))
       ) : (
-        <h1>You don't have anything in favorites yet!</h1>
+        <h1>Dodajte patike u omiljene da bi se prikazale ovde!</h1>
       )}
     </div>
   );

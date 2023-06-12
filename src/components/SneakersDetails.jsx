@@ -26,9 +26,9 @@ const SneakersDetails = () => {
       <div>
         <h2>Description</h2>
         <h3>{sneaker?.title}</h3>
-        <h4>Brand: {sneaker?.brand}</h4>
-        <h4>Price: {sneaker?.retailPrice}</h4>
-        <h4>Release year: {sneaker?.year}</h4>
+        <h4>Brend: {sneaker?.brand}</h4>
+        <h4>Cena: {sneaker?.retailPrice}</h4>
+        <h4>Godina izlaska: {sneaker?.year}</h4>
       </div>
     </div>
   );
