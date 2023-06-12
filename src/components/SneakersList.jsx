@@ -14,6 +14,14 @@ const SneakersList = () => {
 
     console.log("favorites are", favorites)
 
+
+    const favoritesChecker = (id) => {
+
+        const boolean = favorites.some((sneaker)=> sneaker.id == id);
+        return boolean;
+
+    };
+
     useEffect(() => { 
         axios.get(API_URL).then(res=> {
             console.log(res.data)
@@ -22,16 +30,32 @@ const SneakersList = () => {
     },[])
 
     
-    return    <div className ='sneakers-list'> 
+    return (   
+    <div className ='sneakers-list'> 
            {sneakers.map((sneaker)=>(
         <div key={sneaker.id} className="sneaker">
-                <div><h3>{sneaker.title}</h3></div>
-                <div><img src={sneaker.media.thumbUrl} alt="#"/></div> {/* Prikaz slika patika na sajtu preuzet sa apia*/}
-                <div><button onClick={()=> addToFavorites(sneaker)}>Add to Favorites</button></div>
+                <div>
+                    <h3>{sneaker.title}</h3>
+                    </div>
+                <div>
+                    <img src={sneaker.media.thumbUrl} alt="#"/>
+                    </div> {/* Prikaz slika patika na sajtu preuzet sa apia*/}
+                <div>
+                {favoritesChecker(sneaker.id) ? (
+
+                    <button onClick={()=> removeFromFavorites(sneaker)}>
+                        Remove from Favorites
+                        </button>
+                ) : (
+                    <button onClick={()=> addToFavorites(sneaker)}>
+                        Add to Favorites
+                        </button>
+                )}
+            </div>
             </div>
         ))}
-            </div>;
-               
+            </div>
+    );
     
 };
 
